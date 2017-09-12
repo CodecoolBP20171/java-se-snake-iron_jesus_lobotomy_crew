@@ -33,7 +33,6 @@ public class HardEnemy extends GameEntity implements Interactable, Animatable {
     public void step() {
         if (isOutOfBounds()) {
             direction = rnd.nextDouble() * 360;
-            setRotate(direction);
             heading = Utils.directionToVector(direction, speed);
         }
         setX(getX() + heading.getX());
