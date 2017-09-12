@@ -3,6 +3,7 @@ package com.codecool.snake;
 import com.codecool.snake.entities.enemies.FastEnemy;
 import com.codecool.snake.entities.enemies.SimpleEnemy;
 import com.codecool.snake.entities.enemies.StrongEnemy;
+import com.codecool.snake.entities.powerups.IronJesusPowerUp;
 import com.codecool.snake.entities.powerups.SimplePowerup;
 import com.codecool.snake.entities.snakes.SnakeHead;
 import javafx.scene.Scene;
@@ -34,6 +35,13 @@ public class Game extends Pane {
         new SimplePowerup(this);
         new SimplePowerup(this);
         new SimplePowerup(this);
+
+        new IronJesusPowerUp(this);
+        new IronJesusPowerUp(this);
+        new IronJesusPowerUp(this);
+        new IronJesusPowerUp(this);
+        new IronJesusPowerUp(this);
+        new IronJesusPowerUp(this);
     }
 
     public void start() {
