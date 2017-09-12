@@ -1,9 +1,10 @@
 package com.codecool.snake.entities.enemies;
 
-import com.codecool.snake.Globals;
-import com.codecool.snake.Utils;
-import com.codecool.snake.entities.Animatable;
+import com.codecool.snake.Game;
 import com.codecool.snake.entities.GameEntity;
+import com.codecool.snake.Globals;
+import com.codecool.snake.entities.Animatable;
+import com.codecool.snake.Utils;
 import com.codecool.snake.entities.Interactable;
 import com.codecool.snake.entities.snakes.SnakeHead;
 import javafx.geometry.Point2D;
@@ -11,16 +12,16 @@ import javafx.scene.layout.Pane;
 
 import java.util.Random;
 
-public class HardEnemy extends GameEntity implements Interactable, Animatable {
+public class FastEnemy extends GameEntity implements Animatable, Interactable {
     private Point2D heading;
-    private static final int damage = 20;
+    private static final int damage = 5;
     private static Random rnd = new Random();
     private static double direction;
-    private static int speed = 3;
+    private static int speed = 4;
 
-    public HardEnemy(Pane pane) {
+    public FastEnemy(Pane pane) {
         super(pane);
-        setImage(Globals.hardEnemy);
+        setImage(Globals.fastEnemy);
         setCoordinates();
         pane.getChildren().add(this);
         direction = rnd.nextDouble() * 360;
@@ -48,7 +49,7 @@ public class HardEnemy extends GameEntity implements Interactable, Animatable {
 
     @Override
     public String getMessage() {
-        return "20 damage";
+        return "5 damage";
     }
 }
 

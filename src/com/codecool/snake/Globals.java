@@ -17,7 +17,8 @@ public class Globals {
     public static Image snakeHead = new Image("snake_head.png");
     public static Image snakeBody = new Image("snake_body.png");
     public static Image simpleEnemy = new Image("simple_enemy.png");
-    public static Image hardEnemy = new Image("hard_enemy.png");
+    public static Image strongEnemy = new Image("strong_enemy.png");
+    public static Image fastEnemy = new Image ("fast_enemy.png");
     public static Image powerupBerry = new Image("powerup_berry.png");
     //.. put here the other images you want to use
 
