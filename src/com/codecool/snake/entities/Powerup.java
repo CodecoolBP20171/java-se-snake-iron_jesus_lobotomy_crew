@@ -10,6 +10,7 @@ abstract public class Powerup extends GameEntity {
     protected static Pane pane = GameEntity.pane;
     protected static Random rnd = new Random();
 
+
     public Powerup(){
         super(pane);
         pane.getChildren().add(this);

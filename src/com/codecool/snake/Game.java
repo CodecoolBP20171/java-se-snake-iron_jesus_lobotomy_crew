@@ -1,6 +1,7 @@
 package com.codecool.snake;
 
 
+import com.codecool.snake.entities.Enemy;
 import com.codecool.snake.entities.enemies.FastEnemy;
 
 import com.codecool.snake.entities.GameEntity;
@@ -50,7 +51,10 @@ public class Game extends Pane {
         new SimplePowerup();
         new SimplePowerup();
 
+        SnakeHead.healthTotal.setLayoutX(100);
         SnakeHead.healthTotal.setText("Health:" + String.valueOf(Globals.health));
+        Enemy.scoreTotal.setLayoutX(200);
+        Enemy.scoreTotal.setText("Score: " + String.valueOf(Globals.score));
     }
 
 

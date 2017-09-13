@@ -6,12 +6,15 @@ import com.codecool.snake.entities.Animatable;
 import com.codecool.snake.Utils;
 import com.codecool.snake.entities.Interactable;
 import com.codecool.snake.entities.snakes.SnakeHead;
+import javafx.scene.control.Label;
 
 
 public class FastEnemy extends Enemy implements Animatable, Interactable {
 
     private static final int damage = 5;
     private static int speed = 4;
+
+
 
     public FastEnemy() {
         super();
@@ -43,7 +46,8 @@ public class FastEnemy extends Enemy implements Animatable, Interactable {
 
     @Override
     public void setScore(){
-        Globals.score =- 2;
+        Globals.score =Globals.score - 2;
+        scoreTotal.setText("Score: " + String.valueOf(Globals.score));
     }
 }
 

@@ -1,5 +1,6 @@
 package com.codecool.snake;
 
+import com.codecool.snake.entities.Enemy;
 import com.codecool.snake.entities.snakes.SnakeHead;
 import javafx.application.Application;
 
@@ -35,9 +36,10 @@ public class Main extends Application {
         primaryStage.setScene(new Scene(game, Globals.WINDOW_WIDTH, Globals.WINDOW_HEIGHT));
 
         game.getChildren().add(SnakeHead.healthTotal);
+        game.getChildren().add(Enemy.scoreTotal);
 
         // Restart button
-        Button restart = new Button();
+        /*Button restart = new Button();
         restart.setText("Restart");
         restart.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -46,7 +48,7 @@ public class Main extends Application {
 
             }
         });
-        game.getChildren().add(restart);
+        game.getChildren().add(restart);*/
 
         primaryStage.show();
         game.start();

@@ -47,7 +47,8 @@ public class SimpleEnemy extends Enemy implements Animatable, Interactable {
 
     @Override
     public void setScore(){
-        Globals.score =- 2;
+        Globals.score =Globals.score- 2;
+        scoreTotal.setText("Score: " + String.valueOf(Globals.score));
     }
 
 }
