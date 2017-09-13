@@ -45,5 +45,9 @@ public class SimpleEnemy extends Enemy implements Animatable, Interactable {
     }
 
 
+    @Override
+    public void setScore(){
+        Globals.score =- 2;
+    }
 
 }
