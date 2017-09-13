@@ -21,8 +21,17 @@ abstract public class Enemy extends GameEntity{
         GameEntity.pane.getChildren().add(this);
         int speed = 1;
 
-        Random rnd = new Random();
+        startcoordinate();
 
+
+
+        double direction = rnd.nextDouble() * 360;
+        setRotate(direction);
+        heading = Utils.directionToVector(direction, speed);
+        }
+
+    public void startcoordinate(){
+        
         double enemyX = rnd.nextDouble() * Globals.WINDOW_WIDTH;
         double enemyY = rnd.nextDouble()* Globals.WINDOW_HEIGHT;
         System.out.println(enemyX);
@@ -37,11 +46,7 @@ abstract public class Enemy extends GameEntity{
             setY((rnd.nextDouble() * Globals.WINDOW_HEIGHT));
         }
 
-
-
-        double direction = rnd.nextDouble() * 360;
-        setRotate(direction);
-        heading = Utils.directionToVector(direction, speed);
-        }
     }
+    }
+
 
