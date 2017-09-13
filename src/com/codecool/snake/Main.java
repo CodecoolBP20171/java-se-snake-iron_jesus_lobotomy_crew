@@ -1,6 +1,15 @@
 package com.codecool.snake;
 
+import com.codecool.snake.entities.snakes.SnakeHead;
 import javafx.application.Application;
+
+import javafx.beans.property.IntegerProperty;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.stage.Stage;
+
+import static com.codecool.snake.Globals.health;
+
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
@@ -8,6 +17,7 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 import javax.swing.*;
+
 
 public class Main extends Application {
 
@@ -23,6 +33,9 @@ public class Main extends Application {
 
         primaryStage.setTitle("Snake Game");
         primaryStage.setScene(new Scene(game, Globals.WINDOW_WIDTH, Globals.WINDOW_HEIGHT));
+
+        game.getChildren().add(SnakeHead.healthTotal);
+
         // Restart button
         Button restart = new Button();
         restart.setText("Restart");
@@ -34,6 +47,7 @@ public class Main extends Application {
             }
         });
         game.getChildren().add(restart);
+
         primaryStage.show();
         game.start();
     }
