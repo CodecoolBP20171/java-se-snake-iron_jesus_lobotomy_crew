@@ -7,7 +7,7 @@ import javafx.scene.layout.Pane;
 // The base class for every game entity.
 public abstract class GameEntity extends ImageView {
 
-    public static Pane pane;
+    protected static Pane pane;
 
     protected GameEntity(Pane pane) {
         this.pane = pane;
