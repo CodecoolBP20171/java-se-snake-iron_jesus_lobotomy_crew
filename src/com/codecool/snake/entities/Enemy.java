@@ -22,8 +22,22 @@ abstract public class Enemy extends GameEntity{
         int speed = 1;
 
         Random rnd = new Random();
-        setX(rnd.nextDouble() * Globals.WINDOW_WIDTH);
-        setY(rnd.nextDouble() * Globals.WINDOW_HEIGHT);
+
+        double enemyX = rnd.nextDouble() * Globals.WINDOW_WIDTH;
+        double enemyY = rnd.nextDouble()* Globals.WINDOW_HEIGHT;
+        System.out.println(enemyX);
+
+        if (enemyX>495 && enemyX<505){
+            setX((rnd.nextDouble() * Globals.WINDOW_WIDTH)+15);
+
+        }else if (enemyY>495 && enemyY<505){
+            setY((rnd.nextDouble() * Globals.WINDOW_HEIGHT)+15);
+        }else{
+            setX((rnd.nextDouble() * Globals.WINDOW_WIDTH));
+            setY((rnd.nextDouble() * Globals.WINDOW_HEIGHT));
+        }
+
+
 
         double direction = rnd.nextDouble() * 360;
         setRotate(direction);

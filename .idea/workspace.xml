@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="904e52c8-83bd-4e4d-83a4-70307a317227" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/codecool/snake/entities/enemies/FastEnemy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/codecool/snake/Game.java" afterPath="$PROJECT_DIR$/src/com/codecool/snake/Game.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/codecool/snake/entities/Enemy.java" afterPath="$PROJECT_DIR$/src/com/codecool/snake/entities/Enemy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/codecool/snake/entities/GameEntity.java" afterPath="$PROJECT_DIR$/src/com/codecool/snake/entities/GameEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/codecool/snake/entities/enemies/StrongEnemy.java" afterPath="$PROJECT_DIR$/src/com/codecool/snake/entities/enemies/StrongEnemy.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,10 +50,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FastEnemy.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FastEnemy.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/codecool/snake/entities/enemies/FastEnemy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
+            <state relative-caret-position="369">
               <caret line="24" column="60" lean-forward="false" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -71,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Enemy.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Enemy.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/codecool/snake/entities/Enemy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="799">
+              <caret line="36" column="61" lean-forward="false" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -183,9 +178,9 @@
         <option value="$PROJECT_DIR$/src/com/codecool/snake/entities/enemies/SimpleEnemy.java" />
         <option value="$PROJECT_DIR$/src/com/codecool/snake/entities/GameEntity.java" />
         <option value="$PROJECT_DIR$/src/com/codecool/snake/entities/enemies/StrongEnemy.java" />
-        <option value="$PROJECT_DIR$/src/com/codecool/snake/entities/Enemy.java" />
         <option value="$PROJECT_DIR$/src/com/codecool/snake/Game.java" />
         <option value="$PROJECT_DIR$/src/com/codecool/snake/entities/enemies/FastEnemy.java" />
+        <option value="$PROJECT_DIR$/src/com/codecool/snake/entities/Enemy.java" />
       </list>
     </option>
   </component>
@@ -429,7 +424,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31703000" />
+    <option name="totallyTimeSpent" value="32858000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -838,16 +833,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/codecool/snake/entities/Enemy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/codecool/snake/entities/enemies/SimpleEnemy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -884,7 +869,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/codecool/snake/entities/enemies/FastEnemy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
+        <state relative-caret-position="369">
           <caret line="24" column="60" lean-forward="false" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -892,6 +877,16 @@
             <element signature="e#1142#1143#0" expanded="true" />
             <element signature="e#1185#1186#0" expanded="true" />
             <element signature="e#1219#1220#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/codecool/snake/entities/Enemy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="36" column="61" lean-forward="false" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
