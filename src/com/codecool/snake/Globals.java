@@ -11,6 +11,8 @@ import java.util.List;
 // class for holding all static stuff
 public class Globals {
 
+    public static int score;
+
     public static final double WINDOW_WIDTH = 1000;
     public static final double WINDOW_HEIGHT = 700;
 
@@ -43,5 +45,9 @@ public class Globals {
 
     public static List<GameEntity> getGameObjects() {
         return Collections.unmodifiableList(gameObjects);
+    }
+
+    public static void restartGlobalScore(){
+        Globals.score = 0;
     }
 }

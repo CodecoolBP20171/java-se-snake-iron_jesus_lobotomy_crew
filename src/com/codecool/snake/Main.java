@@ -39,6 +39,7 @@ public class Main extends Application {
     }
 
     public void cleanup(){
+        Globals.restartGlobalScore();
         Globals.newGameObjects.removeAll(Globals.newGameObjects);
         Globals.oldGameObjects.removeAll(Globals.oldGameObjects);
         Globals.gameObjects.removeAll(Globals.gameObjects);

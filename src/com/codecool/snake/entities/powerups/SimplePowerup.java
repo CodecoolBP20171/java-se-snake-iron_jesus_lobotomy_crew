@@ -31,4 +31,11 @@ public class SimplePowerup extends GameEntity implements Interactable {
     public String getMessage() {
         return "Got power-up :)";
     }
+
+    @Override
+    public void setScore(){
+        Globals.score =Globals.score+ 5;
+        System.out.println(Globals.score);
+    }
+
 }
