@@ -19,6 +19,7 @@ public class SimpleEnemy extends Enemy implements Animatable, Interactable {
 
     public SimpleEnemy(Pane pane) {
         super(pane);
+        setImage(Globals.simpleEnemy);
 
     }
 

@@ -14,7 +14,7 @@ abstract public class Enemy extends GameEntity{
 
     protected Enemy(Pane pane) {
         super(pane);
-        setImage(Globals.simpleEnemy);
+
         GameEntity.pane.getChildren().add(this);
         int speed = 1;
 

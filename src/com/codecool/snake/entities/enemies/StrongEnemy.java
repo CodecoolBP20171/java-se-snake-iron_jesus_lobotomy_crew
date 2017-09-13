@@ -16,8 +16,9 @@ public class StrongEnemy  extends Enemy implements Animatable, Interactable {
     private double direction;
     private Random rnd = new Random();
 
-    protected StrongEnemy(Pane pane) {
+    public StrongEnemy(Pane pane) {
         super(pane);
+        setImage(Globals.snakeBody);
     }
 
     @Override
@@ -29,43 +30,6 @@ public class StrongEnemy  extends Enemy implements Animatable, Interactable {
         setX(getX() + heading.getX());
         setY(getY() + heading.getY());
 
-
-    }
-
-    @Override
-    public void apply(SnakeHead snakeHead) {
-
-    }
-
-    @Override
-    public String getMessage() {
-        return null;
-    }
-
-    @Override
-    public void setScore() {
-
-    }
-}
-/*public class StrongEnemy extends Enemy implements Interactable, Animatable {
-
-    private static final int damage = 15;
-    private static int speed = 2;
-
-    public StrongEnemy() {
-        super();
-        setImage(Globals.strongEnemy);
-    }
-
-
-    @Override
-    public void step() {
-        if (isOutOfBounds()) {
-            direction = rnd.nextDouble() * 360;
-            heading = Utils.directionToVector(direction, speed);
-        }
-        setX(getX() + heading.getX());
-        setY(getY() + heading.getY());
 
     }
 
@@ -73,6 +37,8 @@ public class StrongEnemy  extends Enemy implements Animatable, Interactable {
     public void apply(SnakeHead player) {
         player.changeHealth(-damage);
         destroy();
+
+
     }
 
     @Override
@@ -81,9 +47,10 @@ public class StrongEnemy  extends Enemy implements Animatable, Interactable {
     }
 
     @Override
-    public void setScore(){
+    public void setScore() {
         Globals.score =- 2;
+
     }
-}*/
+}
 
 
