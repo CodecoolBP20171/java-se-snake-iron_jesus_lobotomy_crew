@@ -14,22 +14,22 @@ public class Game extends Pane {
     public Game() {
         new SnakeHead(this, 500, 500);
         
-        new SimpleEnemy(this);
-        new SimpleEnemy(this);
-        new SimpleEnemy(this);
-        new SimpleEnemy(this);
+        new SimpleEnemy();
+        new SimpleEnemy();
+        new SimpleEnemy();
+        new SimpleEnemy();
 
-        new StrongEnemy(this);
-        new StrongEnemy(this);
-        new StrongEnemy(this);
-        new StrongEnemy(this);
-        new StrongEnemy(this);
-        new StrongEnemy(this);
+        new StrongEnemy();
+        new StrongEnemy();
+        new StrongEnemy();
+        new StrongEnemy();
+        new StrongEnemy();
+        new StrongEnemy();
 
-        new FastEnemy(this);
-        new FastEnemy(this);
-        new FastEnemy(this);
-        new FastEnemy(this);
+        new FastEnemy();
+        new FastEnemy();
+        new FastEnemy();
+        new FastEnemy();
 
         new SimplePowerup(this);
         new SimplePowerup(this);
