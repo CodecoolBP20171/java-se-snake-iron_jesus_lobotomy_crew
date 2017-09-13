@@ -69,4 +69,12 @@ public class SnakeHead extends GameEntity implements Animatable {
     public void changeHealth(int diff) {
         health += diff;
     }
+
+    public void changeSpeed(int multiplier) {
+        speed *= multiplier;
+    }
+
+    public static void setSpeedToDefault() {
+        speed = 2;
+    }
 }
