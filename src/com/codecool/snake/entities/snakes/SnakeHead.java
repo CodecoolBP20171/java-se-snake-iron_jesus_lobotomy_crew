@@ -9,9 +9,7 @@ import com.codecool.snake.entities.Interactable;
 import javafx.geometry.Point2D;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
-import javafx.util.converter.NumberStringConverter;
 
-import javax.script.Bindings;
 
 public class SnakeHead extends GameEntity implements Animatable {
 
@@ -75,9 +73,6 @@ public class SnakeHead extends GameEntity implements Animatable {
         }
     }
 
-    public int getCurrentHealth(){
-        return Globals.health;
-    }
 
     public void changeHealth(int diff) {
         Globals.health += diff;

@@ -3,20 +3,13 @@ package com.codecool.snake;
 import com.codecool.snake.entities.snakes.SnakeHead;
 import javafx.application.Application;
 
-import javafx.beans.property.IntegerProperty;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.stage.Stage;
-
-import static com.codecool.snake.Globals.health;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.stage.Stage;
 
-import javax.swing.*;
 
 
 public class Main extends Application {

@@ -1,7 +1,6 @@
 package com.codecool.snake.entities;
 
 import com.codecool.snake.Globals;
-import com.codecool.snake.entities.snakes.SnakeBody;
 import com.codecool.snake.entities.snakes.SnakeHead;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
@@ -46,8 +45,8 @@ public abstract class GameEntity extends ImageView {
     }
 
     protected boolean isOutOfBounds() {
-        if (getX() >= Globals.WINDOW_WIDTH - 150|| getX() <= 0 ||
-            getY() >= Globals.WINDOW_HEIGHT - 150|| getY() <= 0) {
+        if (getX() >= Globals.WINDOW_WIDTH - this.getImage().getWidth() || getX() <= 0 ||
+            getY() >= Globals.WINDOW_HEIGHT - this.getImage().getWidth() || getY() <= 0) {
             return true;
         }
         return false;
