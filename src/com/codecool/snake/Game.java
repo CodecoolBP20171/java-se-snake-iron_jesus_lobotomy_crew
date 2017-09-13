@@ -40,8 +40,6 @@ public class Game extends Pane {
         new IronJesusPowerUp(this);
         new IronJesusPowerUp(this);
         new IronJesusPowerUp(this);
-        new IronJesusPowerUp(this);
-        new IronJesusPowerUp(this);
     }
 
     public void start() {
@@ -59,6 +57,7 @@ public class Game extends Pane {
                 case RIGHT: Globals.rightKeyDown  = false; break;
             }
         });
+        Globals.timer = new Timer();
         Globals.gameLoop = new GameLoop();
         Globals.gameLoop.start();
     }
