@@ -1,25 +1,23 @@
 package com.codecool.snake.entities.enemies;
 
-import com.codecool.snake.entities.Enemy;
 import com.codecool.snake.Globals;
-import com.codecool.snake.entities.Animatable;
 import com.codecool.snake.Utils;
+import com.codecool.snake.entities.Animatable;
+import com.codecool.snake.entities.Enemy;
 import com.codecool.snake.entities.Interactable;
 import com.codecool.snake.entities.snakes.SnakeHead;
 
 
-// a simple enemy TODO make better ones.
-public class SimpleEnemy extends Enemy implements Animatable, Interactable {
+public class StrongEnemy extends Enemy implements Interactable, Animatable {
 
-    private static int speed = 1;
-    private static final int damage = 10;
+    private static final int damage = 15;
+    private static int speed = 2;
 
-
-    public SimpleEnemy() {
+    public StrongEnemy() {
         super();
-        setImage(Globals.simpleEnemy);
-
+        setImage(Globals.strongEnemy);
     }
+
 
     @Override
     public void step() {
@@ -32,7 +30,6 @@ public class SimpleEnemy extends Enemy implements Animatable, Interactable {
 
     }
 
-
     @Override
     public void apply(SnakeHead player) {
         player.changeHealth(-damage);
@@ -43,11 +40,5 @@ public class SimpleEnemy extends Enemy implements Animatable, Interactable {
     public String getMessage() {
         return damage + " damage";
     }
-
-
-    @Override
-    public void setScore(){
-        Globals.score =- 2;
-    }
-
 }
+

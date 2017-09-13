@@ -1,7 +1,12 @@
 package com.codecool.snake;
 
+
+import com.codecool.snake.entities.enemies.FastEnemy;
+
 import com.codecool.snake.entities.GameEntity;
+
 import com.codecool.snake.entities.enemies.SimpleEnemy;
+import com.codecool.snake.entities.enemies.StrongEnemy;
 import com.codecool.snake.entities.powerups.SimplePowerup;
 import com.codecool.snake.entities.snakes.SnakeHead;
 import javafx.event.ActionEvent;
@@ -15,12 +20,37 @@ import javafx.stage.Stage;
 
 import java.io.File;
 
+
 public class Game extends Pane {
-
-
+  
     public Game() {
-        newGame();
-    }
+
+        new SnakeHead(this, 500, 500);
+
+
+        new SimpleEnemy();
+        new SimpleEnemy();
+        new SimpleEnemy();
+        new SimpleEnemy();
+
+        new StrongEnemy();
+        new StrongEnemy();
+        new StrongEnemy();
+        new StrongEnemy();
+        new StrongEnemy();
+        new StrongEnemy();
+
+        new FastEnemy();
+        new FastEnemy();
+        new FastEnemy();
+        new FastEnemy();
+
+        new SimplePowerup();
+        new SimplePowerup();
+        new SimplePowerup();
+        new SimplePowerup();
+
+        SnakeHead.healthTotal.setText("Health:" + String.valueOf(Globals.health));
 
 
     public void start() {
@@ -45,22 +75,7 @@ public class Game extends Pane {
 
 
 
-    public  void newGame(){
-
-        new SnakeHead(this, 500, 500);
-
-        new SimpleEnemy(this);
-        new SimpleEnemy(this);
-        new SimpleEnemy(this);
-        new SimpleEnemy(this);
-
-        new SimplePowerup(this);
-        new SimplePowerup(this);
-        new SimplePowerup(this);
-        new SimplePowerup(this);
-    }
-
-
+    
     //Show Congratulation popup window when player won
     public static void showPopup(){
 
