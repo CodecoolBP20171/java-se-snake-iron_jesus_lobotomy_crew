@@ -11,8 +11,10 @@ import javafx.scene.layout.Pane;
 public class Game extends Pane {
 
     public Game() {
+
         new SnakeHead(this, 500, 500);
-        
+
+
         new SimpleEnemy();
         new SimpleEnemy();
         new SimpleEnemy();
@@ -34,6 +36,8 @@ public class Game extends Pane {
         new SimplePowerup();
         new SimplePowerup();
         new SimplePowerup();
+
+        SnakeHead.healthTotal.setText("Health:" + String.valueOf(Globals.health));
     }
 
     public void start() {
