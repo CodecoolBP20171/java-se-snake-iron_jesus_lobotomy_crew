@@ -51,6 +51,7 @@ public class Game extends Pane {
         new SimplePowerup();
 
         SnakeHead.healthTotal.setText("Health:" + String.valueOf(Globals.health));
+    }
 
 
     public void start() {

@@ -40,5 +40,10 @@ public class FastEnemy extends Enemy implements Animatable, Interactable {
     public String getMessage() {
         return damage + " damage";
     }
+
+    @Override
+    public void setScore(){
+        Globals.score =- 2;
+    }
 }
 
