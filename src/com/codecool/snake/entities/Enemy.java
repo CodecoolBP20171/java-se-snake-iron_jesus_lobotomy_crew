@@ -11,6 +11,9 @@ abstract public class Enemy extends GameEntity{
 
     protected Point2D heading;
     protected static final int damage = 10;
+    protected Random rnd = new Random();
+    protected double direction;
+
 
     protected Enemy(Pane pane) {
         super(pane);

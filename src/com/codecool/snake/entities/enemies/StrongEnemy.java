@@ -14,7 +14,7 @@ public class StrongEnemy  extends Enemy implements Animatable, Interactable {
 
     private static int speed = 2;
     private double direction;
-    private Random rnd = new Random();
+
 
     public StrongEnemy(Pane pane) {
         super(pane);

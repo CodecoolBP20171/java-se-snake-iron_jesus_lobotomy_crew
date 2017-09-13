@@ -8,6 +8,7 @@ import javafx.scene.layout.Pane;
 public abstract class GameEntity extends ImageView {
 
     protected static Pane pane;
+    protected static double direction;
 
     protected GameEntity(Pane pane) {
         this.pane = pane;
