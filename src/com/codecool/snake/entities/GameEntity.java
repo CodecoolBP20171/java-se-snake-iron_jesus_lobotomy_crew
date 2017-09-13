@@ -11,14 +11,19 @@ import java.util.Random;
 // The base class for every game entity.
 public abstract class GameEntity extends ImageView {
 
-    protected Pane pane;
+    protected static Pane pane;
     protected Random rnd = new Random();
+
 
     protected GameEntity(Pane pane) {
         this.pane = pane;
         // add to the main loop.
         Globals.addGameObject(this);
     }
+
+    protected GameEntity() {
+    }
+
 
     public void destroy() {
         if (getParent() != null) {
@@ -30,7 +35,7 @@ public abstract class GameEntity extends ImageView {
     public void setCoordinates() {
         for (GameEntity entity : Globals.getGameObjects()) {
             while (getBoundsInParent().intersects(entity.getBoundsInParent())) {
-                if (entity instanceof SnakeBody || entity instanceof SnakeHead) {
+                if (entity instanceof SnakeHead) {
                     setX(rnd.nextDouble() * Globals.WINDOW_WIDTH);
                     setY(rnd.nextDouble() * Globals.WINDOW_HEIGHT);
                 }
@@ -39,8 +44,8 @@ public abstract class GameEntity extends ImageView {
     }
 
     protected boolean isOutOfBounds() {
-        if (getX() >= Globals.WINDOW_WIDTH - 1|| getX() <= 0 ||
-            getY() >= Globals.WINDOW_HEIGHT - 1|| getY() <= 0) {
+        if (getX() >= Globals.WINDOW_WIDTH - 150|| getX() <= 0 ||
+            getY() >= Globals.WINDOW_HEIGHT - 150|| getY() <= 0) {
             return true;
         }
         return false;
