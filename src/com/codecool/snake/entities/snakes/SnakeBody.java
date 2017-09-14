@@ -31,6 +31,7 @@ public class SnakeBody extends GameEntity implements Animatable {
         setX(xc);
         setY(yc);
         for (int i = 0; i < historySize; i++) {
+
             history.add(new Vec2d(xc, yc));
         }
     }
@@ -39,6 +40,7 @@ public class SnakeBody extends GameEntity implements Animatable {
         Vec2d pos = history.poll(); // remove the oldest item from the history
         setX(pos.x);
         setY(pos.y);
+        this.setRotate(SnakeHead.direction);
         history.add(new Vec2d(parent.getX(), parent.getY())); // add the parent's current position to the beginning of the history
     }
 
