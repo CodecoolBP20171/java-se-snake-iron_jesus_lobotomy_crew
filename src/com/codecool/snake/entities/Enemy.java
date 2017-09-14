@@ -1,3 +1,4 @@
+    public static Label scoreTotal = new Label();
 package com.codecool.snake.entities;
 
 import com.codecool.snake.Globals;

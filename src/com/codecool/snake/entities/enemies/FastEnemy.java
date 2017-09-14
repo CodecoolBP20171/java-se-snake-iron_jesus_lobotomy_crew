@@ -1,3 +1,4 @@
+import javafx.scene.control.Label;
 package com.codecool.snake.entities.enemies;
 
 import com.codecool.snake.Globals;
@@ -111,3 +112,9 @@ public class FastEnemy extends Enemy implements Animatable, Interactable {
     }
 }
 */
+
+    @Override
+    public void setScore(){
+        Globals.score =Globals.score - 2;
+        scoreTotal.setText("Score: " + String.valueOf(Globals.score));
+    }

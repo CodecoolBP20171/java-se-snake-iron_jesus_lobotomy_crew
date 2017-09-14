@@ -66,13 +66,10 @@ public class StrongEnemy  extends Enemy implements Animatable, Interactable {
     @Override
     public String getMessage() {
         return damage + " damage";
-    }
-
-    @Override
-    public void setScore() {
-        Globals.score =- 2;
-
-    }
 }
-
-
+    @Override
+    public void setScore(){
+        scoreTotal.setText("Score: " + String.valueOf(Globals.score));
+        Globals.score =Globals.score- 2;
+    }
+    }
