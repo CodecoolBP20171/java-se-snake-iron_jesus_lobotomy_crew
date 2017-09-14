@@ -14,11 +14,13 @@ import com.codecool.snake.entities.powerups.SimplePowerup;
 import com.codecool.snake.entities.snakes.SnakeHead;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
+import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 
 import java.io.File;
@@ -96,6 +98,7 @@ public class Game extends Pane {
 
         // setting button function
         exit.setText("Exit");
+        winPopup.setAlignment(Pos.CENTER);
         exit.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -106,6 +109,8 @@ public class Game extends Pane {
         // Adding text
         Text gameOver = new Text("Game Over");
         Text score = new Text ("Your score is "+ Globals.score);
+        gameOver.setTextAlignment(TextAlignment.CENTER);
+        score.setTextAlignment(TextAlignment.CENTER);
         winPopup.getChildren().add(gameOver);
         winPopup.getChildren().add(score);
 

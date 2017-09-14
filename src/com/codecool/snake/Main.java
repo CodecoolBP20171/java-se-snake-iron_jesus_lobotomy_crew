@@ -5,12 +5,14 @@ import com.codecool.snake.entities.snakes.SnakeHead;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
+import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 
 
@@ -42,8 +44,8 @@ public class Main extends Application {
         Enemy.scoreTotal.setLayoutX(300);
         SnakeHead.healthTotal.setTextFill(Color.WHITE);
         Enemy.scoreTotal.setTextFill(Color.WHITE);
-        SnakeHead.healthTotal.setFont(Font.font("Verdana", 20));
-        Enemy.scoreTotal.setFont(Font.font("Verdana", 20));
+        SnakeHead.healthTotal.setFont(Font.font("Verdana", 15));
+        Enemy.scoreTotal.setFont(Font.font("Verdana", 15));
 
         game.getChildren().add(SnakeHead.healthTotal);
         game.getChildren().add(Enemy.scoreTotal);
@@ -51,6 +53,7 @@ public class Main extends Application {
         // Restart button
         Button restart = new Button();
         restart.setText("Restart");
+
         restart.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
