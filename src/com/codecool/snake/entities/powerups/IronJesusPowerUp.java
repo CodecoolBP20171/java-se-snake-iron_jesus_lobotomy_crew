@@ -17,6 +17,7 @@ public class IronJesusPowerUp extends Powerup implements Interactable{
     @Override
     public void apply(SnakeHead snakeHead) {
         snakeHead.changeHealth(42);
+        snakeHead.addPart(4);
         destroy();
     }
 

@@ -21,6 +21,7 @@ public class RetardedFrogPowerUp extends Powerup implements Interactable {
 
     @Override
     public void apply(SnakeHead snakeHead) {
+        snakeHead.addPart(4);
         if  (!isApplied) {
             setApplied(true);
             snakeHead.changeSpeed(2);
