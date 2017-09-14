@@ -7,11 +7,10 @@ import java.util.Random;
 
 abstract public class Powerup extends GameEntity {
 
-    protected static Pane pane = GameEntity.pane;
     protected static Random rnd = new Random();
 
 
-    public Powerup(){
+    public Powerup(Pane pane){
         super(pane);
         pane.getChildren().add(this);
         setX(rnd.nextDouble() * Globals.WINDOW_WIDTH);

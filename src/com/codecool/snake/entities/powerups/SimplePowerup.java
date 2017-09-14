@@ -11,7 +11,7 @@ import com.codecool.snake.entities.snakes.SnakeHead;
 public class SimplePowerup extends Powerup implements Interactable {
 
     public SimplePowerup() {
-        super();
+        super(pane);
         setImage(Globals.powerupBerry);
     }
 
