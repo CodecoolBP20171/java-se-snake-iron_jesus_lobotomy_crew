@@ -1,14 +1,11 @@
 package com.codecool.snake.entities.powerups;
 
-import com.codecool.snake.Game;
 import com.codecool.snake.Globals;
-import com.codecool.snake.entities.GameEntity;
+import com.codecool.snake.entities.Enemy;
 import com.codecool.snake.entities.Interactable;
 import com.codecool.snake.entities.Powerup;
 import com.codecool.snake.entities.snakes.SnakeHead;
-import javafx.scene.layout.Pane;
 
-import java.util.Random;
 
 public class IronJesusPowerUp extends Powerup implements Interactable{
 
@@ -25,11 +22,13 @@ public class IronJesusPowerUp extends Powerup implements Interactable{
 
     @Override
     public String getMessage() {
-            return "+42 HP";
+            return "42 HP";
         }
 
     @Override
     public void setScore() {
-
+        Globals.score =Globals.score+ 10;
+        System.out.println(Globals.score);
+        Enemy.scoreTotal.setText("Score: "+ String.valueOf(Globals.score));
     }
 }

@@ -2,6 +2,7 @@ package com.codecool.snake.entities.powerups;
 
 import com.codecool.snake.Globals;
 import com.codecool.snake.Timer;
+import com.codecool.snake.entities.Enemy;
 import com.codecool.snake.entities.Interactable;
 import com.codecool.snake.entities.Powerup;
 import com.codecool.snake.entities.snakes.SnakeHead;
@@ -44,7 +45,9 @@ public class RetardedFrogPowerUp extends Powerup implements Interactable {
 
     @Override
     public void setScore() {
-
+        Globals.score =Globals.score+ 15;
+        System.out.println(Globals.score);
+        Enemy.scoreTotal.setText("Score: "+ String.valueOf(Globals.score));
     }
 
     public static void setApplied(boolean bool) {
