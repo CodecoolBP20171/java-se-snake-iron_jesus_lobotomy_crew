@@ -13,7 +13,7 @@ public class RetardedFrogPowerUp extends Powerup implements Interactable {
     private static boolean isApplied;
 
     public RetardedFrogPowerUp() {
-        super();
+        super(pane);
         setImage(Globals.froggy);
         isApplied = false;
     }
@@ -40,6 +40,11 @@ public class RetardedFrogPowerUp extends Powerup implements Interactable {
         } else {
             return "You already got this";
         }
+    }
+
+    @Override
+    public void setScore() {
+
     }
 
     public static void setApplied(boolean bool) {

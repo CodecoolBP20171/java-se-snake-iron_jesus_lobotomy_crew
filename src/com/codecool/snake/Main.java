@@ -9,6 +9,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 
@@ -16,7 +18,7 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         System.setProperty("quantum.multithreaded", "false");
-        Application.launch(Snake.class, args);
+        Application.launch(Main.class, args);
     }
 
 
@@ -36,6 +38,12 @@ public class Main extends Application {
         //then you set to your node
         game.setBackground(new Background(myBI));
 
+        SnakeHead.healthTotal.setLayoutX(100);
+        Enemy.scoreTotal.setLayoutX(300);
+        SnakeHead.healthTotal.setTextFill(Color.WHITE);
+        Enemy.scoreTotal.setTextFill(Color.WHITE);
+        SnakeHead.healthTotal.setFont(Font.font("Verdana", 20));
+        Enemy.scoreTotal.setFont(Font.font("Verdana", 20));
 
         game.getChildren().add(SnakeHead.healthTotal);
         game.getChildren().add(Enemy.scoreTotal);

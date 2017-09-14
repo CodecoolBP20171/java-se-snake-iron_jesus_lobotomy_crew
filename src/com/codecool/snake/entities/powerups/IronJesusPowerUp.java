@@ -13,7 +13,7 @@ import java.util.Random;
 public class IronJesusPowerUp extends Powerup implements Interactable{
 
     public IronJesusPowerUp() {
-        super();
+        super(pane);
         setImage(Globals.ironJesus);
     }
 
@@ -27,4 +27,9 @@ public class IronJesusPowerUp extends Powerup implements Interactable{
     public String getMessage() {
             return "+42 HP";
         }
+
+    @Override
+    public void setScore() {
+
+    }
 }

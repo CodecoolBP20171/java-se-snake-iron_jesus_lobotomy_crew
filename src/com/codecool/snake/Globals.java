@@ -22,8 +22,6 @@ public class Globals {
     public static Image snakeHead = new Image("nyancat-resize.gif");
     public static Image snakeBody = new Image("nyanrainbow-resize.gif");
     public static Image simpleEnemy = new Image("simple_enemy.png");
-    public static Image powerupBerry = new Image("powerup_berry.png");
-    public static Image fastEnemy = new Image("fast_enemy.png");
     public static Image strongEnemy = new Image("strong_enemy.png");
     public static Image fastEnemy = new Image ("fast_enemy.png");
     public static Image powerupBerry = new Image("powerup_berry.png");
