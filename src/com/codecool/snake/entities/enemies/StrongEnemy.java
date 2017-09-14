@@ -18,7 +18,7 @@ public class StrongEnemy  extends Enemy implements Animatable, Interactable {
 
     public StrongEnemy(Pane pane) {
         super(pane);
-        setImage(Globals.snakeBody);
+        setImage(Globals.strongEnemy);
     }
 
     @Override

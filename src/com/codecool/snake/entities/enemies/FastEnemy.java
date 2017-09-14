@@ -17,7 +17,7 @@ public class FastEnemy extends Enemy implements Animatable, Interactable {
 
     public FastEnemy(Pane pane) {
         super(pane);
-        setImage(Globals.powerupBerry);
+        setImage(Globals.fastEnemy);
     }
 
     @Override

@@ -24,10 +24,10 @@ public abstract class GameEntity extends ImageView {
     }
 
     protected boolean isOutOfBounds() {
-        if (getX() > Globals.WINDOW_WIDTH - this.getImage().getWidth() - 10  || getX() < 0 ||
-            getY() > Globals.WINDOW_HEIGHT - this.getImage().getHeight() - 10 || getY() < 0) {
+        if (getX() > Globals.WINDOW_WIDTH - this.getImage().getWidth() || getX() < 0 ||
+            getY() > Globals.WINDOW_HEIGHT - this.getImage().getHeight() || getY() < 0) {
             return true;
-        }
+    }
         return false;
     }
 }
