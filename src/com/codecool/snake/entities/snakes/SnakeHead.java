@@ -66,6 +66,8 @@ public class SnakeHead extends GameEntity implements Animatable {
         if (isOutOfBounds() || Globals.health <= 0) {
             System.out.println(Globals.health);
             System.out.println("Game Over");
+            System.out.println("ANYÁDAT TE MOCSOK SZAR");
+
             Globals.gameLoop.stop();
             Sound.nyan.stop();
             showPopup();
