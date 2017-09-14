@@ -8,8 +8,6 @@ import com.codecool.snake.entities.Interactable;
 import com.codecool.snake.entities.snakes.SnakeHead;
 import javafx.scene.layout.Pane;
 
-import java.util.Random;
-
 public class StrongEnemy  extends Enemy implements Animatable, Interactable {
 
     private static int speed = 2;

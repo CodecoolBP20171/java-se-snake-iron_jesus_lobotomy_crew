@@ -1,7 +1,6 @@
 package com.codecool.snake.entities;
 
 import com.codecool.snake.Globals;
-import com.codecool.snake.entities.snakes.SnakeBody;
 import com.codecool.snake.entities.snakes.SnakeHead;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;

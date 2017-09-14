@@ -1,11 +1,8 @@
 package com.codecool.snake;
 
 
-import com.codecool.snake.entities.Enemy;
 import com.codecool.snake.entities.enemies.FastEnemy;
 
-import com.codecool.snake.entities.GameEntity;
-import com.codecool.snake.entities.enemies.FastEnemy;
 import com.codecool.snake.entities.enemies.SimpleEnemy;
 import com.codecool.snake.entities.enemies.StrongEnemy;
 import com.codecool.snake.entities.powerups.IronJesusPowerUp;
@@ -22,8 +19,6 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
-
-import java.io.File;
 
 
 public class Game extends Pane {

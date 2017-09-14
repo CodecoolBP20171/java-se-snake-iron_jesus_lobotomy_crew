@@ -1,13 +1,11 @@
 package com.codecool.snake.entities.powerups;
 
 import com.codecool.snake.Globals;
-import com.codecool.snake.Timer;
 import com.codecool.snake.entities.Enemy;
 import com.codecool.snake.entities.Interactable;
 import com.codecool.snake.entities.Powerup;
 import com.codecool.snake.entities.snakes.SnakeHead;
 
-import static com.codecool.snake.Globals.snakeHead;
 
 public class RetardedFrogPowerUp extends Powerup implements Interactable {
 

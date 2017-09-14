@@ -5,7 +5,6 @@ import com.codecool.snake.entities.Animatable;
 import com.codecool.snake.entities.powerups.RetardedFrogPowerUp;
 import com.codecool.snake.entities.snakes.SnakeHead;
 import javafx.animation.AnimationTimer;
-import jdk.nashorn.internal.objects.Global;
 
 public class GameLoop extends AnimationTimer {
 
