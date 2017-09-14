@@ -27,16 +27,28 @@ public class StrongEnemy  extends Enemy implements Animatable, Interactable {
             direction = rnd.nextDouble() * 360;
             heading = Utils.directionToVector(direction, speed);
         }
+        if (getX() >= 960) {
+            direction = rnd.nextDouble() * 360;
+            heading = Utils.directionToVector(direction, speed);
+            setX(10 + this.getImage().getWidth()+heading.getX() );
+        }
+        if (getX() <= 10) {
+            direction = rnd.nextDouble() * 360;
+            heading = Utils.directionToVector(direction, speed);
+            setX(960 - this.getImage().getWidth()+ heading.getX());
+        }
+        if (getY() >= 620) {
+            direction = rnd.nextDouble() * 360;
+            heading = Utils.directionToVector(direction, speed);
+            setY(10 + this.getImage().getHeight()+ heading.getY());
+        }
+        if (getY() <= 10) {
+            direction = rnd.nextDouble() * 360;
+            heading = Utils.directionToVector(direction, speed);
+            setY(620 - this.getImage().getHeight() + heading.getY());
 
-        if (this.getX() >= Globals.WINDOW_WIDTH || this.getY() >= Globals.WINDOW_HEIGHT) {
-            System.out.println("Out of bounds");
-            setX(getX() - this.getImage().getWidth() + heading.getX());
-            setY(getY() - this.getImage().getHeight() + heading.getY());
-        } else if (this.getX() <= 0 || this.getY() <= 0) {
-            System.out.println("out of bounds");
-            setX(getX() + this.getImage().getWidth() + heading.getX());
-            setY(getY() + this.getImage().getHeight() + heading.getY());
-        } else {
+        }else{
+
             setX(getX() + heading.getX());
             setY(getY() + heading.getY());
         }

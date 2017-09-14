@@ -51,10 +51,10 @@ public class Game extends Pane {
 
         new SnakeHead(this, 500, 500);
 
-        //new SimpleEnemy(this);
-        //new SimpleEnemy(this);
-        //new SimpleEnemy(this);
-        //new SimpleEnemy(this);
+        new SimpleEnemy(this);
+        new SimpleEnemy(this);
+        new SimpleEnemy(this);
+        new SimpleEnemy(this);
 
         new StrongEnemy(this);
         new StrongEnemy(this);
@@ -62,10 +62,10 @@ public class Game extends Pane {
         new StrongEnemy(this);
 
 
-        //new FastEnemy(this);
-        //new FastEnemy(this);
-        //new FastEnemy(this);
-        //new FastEnemy(this);
+        new FastEnemy(this);
+        new FastEnemy(this);
+        new FastEnemy(this);
+        new FastEnemy(this);
 
         new SimplePowerup(this);
         new SimplePowerup(this);

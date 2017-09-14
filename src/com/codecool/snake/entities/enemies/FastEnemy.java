@@ -27,21 +27,35 @@ public class FastEnemy extends Enemy implements Animatable, Interactable {
             direction = rnd.nextDouble() * 360;
             heading = Utils.directionToVector(direction, speed);
         }
+        if (getX() >= 960) {
+            direction = rnd.nextDouble() * 360;
+            heading = Utils.directionToVector(direction, speed);
+            setX(10 + this.getImage().getWidth() + heading.getX());
+        }
+        if (getX() <= 10) {
+            direction = rnd.nextDouble() * 360;
+            heading = Utils.directionToVector(direction, speed);
+            setX(960 - this.getImage().getWidth() + heading.getX());
+        }
+        if (getY() >= 620) {
+            direction = rnd.nextDouble() * 360;
+            heading = Utils.directionToVector(direction, speed);
+            setY(10 + this.getImage().getHeight() + heading.getY());
+        }
+        if (getY() <= 10) {
+            direction = rnd.nextDouble() * 360;
+            heading = Utils.directionToVector(direction, speed);
+            setY(620 - this.getImage().getHeight() + heading.getY());
 
-        if (enemyX >= 1000 || enemyY >= 700) {
-            setX(getX() - this.getImage().getWidth() + heading.getX());
-            setY(getY() - this.getImage().getHeight() + heading.getY());
-        } else if (enemyX <= 0 || enemyY <= 0) {
-            setX(getX() + this.getImage().getWidth() + heading.getX());
-            setY(getY() + this.getImage().getHeight() + heading.getY());
         } else {
+
             setX(getX() + heading.getX());
             setY(getY() + heading.getY());
         }
-
     }
 
-    @Override
+
+        @Override
     public void apply(SnakeHead player) {
         player.changeHealth(-damage);
         destroy();
