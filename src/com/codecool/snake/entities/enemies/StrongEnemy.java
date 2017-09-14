@@ -13,8 +13,7 @@ import java.util.Random;
 public class StrongEnemy  extends Enemy implements Animatable, Interactable {
 
     private static int speed = 2;
-    private double direction;
-
+    private static int damage = 5;
 
     public StrongEnemy(Pane pane) {
         super(pane);
@@ -23,13 +22,24 @@ public class StrongEnemy  extends Enemy implements Animatable, Interactable {
 
     @Override
     public void step() {
+        heading = Utils.directionToVector(direction, speed);
         if (isOutOfBounds()) {
             direction = rnd.nextDouble() * 360;
             heading = Utils.directionToVector(direction, speed);
         }
-        setX(getX() + heading.getX());
-        setY(getY() + heading.getY());
 
+        if (this.getX() >= Globals.WINDOW_WIDTH || this.getY() >= Globals.WINDOW_HEIGHT) {
+            System.out.println("Out of bounds");
+            setX(getX() - this.getImage().getWidth() + heading.getX());
+            setY(getY() - this.getImage().getHeight() + heading.getY());
+        } else if (this.getX() <= 0 || this.getY() <= 0) {
+            System.out.println("out of bounds");
+            setX(getX() + this.getImage().getWidth() + heading.getX());
+            setY(getY() + this.getImage().getHeight() + heading.getY());
+        } else {
+            setX(getX() + heading.getX());
+            setY(getY() + heading.getY());
+        }
 
     }
 

@@ -13,6 +13,8 @@ abstract public class Enemy extends GameEntity{
     protected static final int damage = 10;
     protected Random rnd = new Random();
     protected double direction;
+    protected double enemyX = rnd.nextDouble() * Globals.WINDOW_WIDTH;
+    protected double enemyY = rnd.nextDouble()* Globals.WINDOW_HEIGHT;
 
 
     protected Enemy(Pane pane) {
@@ -21,7 +23,7 @@ abstract public class Enemy extends GameEntity{
         GameEntity.pane.getChildren().add(this);
         int speed = 1;
 
-        startcoordinate();
+        startCoordinate();
 
 
 
@@ -30,10 +32,9 @@ abstract public class Enemy extends GameEntity{
         heading = Utils.directionToVector(direction, speed);
         }
 
-    public void startcoordinate(){
+    public void startCoordinate(){
         
-        double enemyX = rnd.nextDouble() * Globals.WINDOW_WIDTH;
-        double enemyY = rnd.nextDouble()* Globals.WINDOW_HEIGHT;
+
         System.out.println(enemyX);
 
         if (enemyX>495 && enemyX<505){

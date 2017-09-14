@@ -15,7 +15,8 @@ import java.util.Random;
 // a simple enemy TODO make better ones.
 public class SimpleEnemy extends Enemy implements Animatable, Interactable {
 
-
+    private static final int damage = 10;
+    private static int speed = 1;
 
     public SimpleEnemy(Pane pane) {
         super(pane);
@@ -25,11 +26,23 @@ public class SimpleEnemy extends Enemy implements Animatable, Interactable {
 
     @Override
     public void step() {
+        heading = Utils.directionToVector(direction, speed);
         if (isOutOfBounds()) {
-            destroy();
+            direction = rnd.nextDouble() * 360;
+            heading = Utils.directionToVector(direction, speed);
         }
-        setX(getX() + heading.getX());
-        setY(getY() + heading.getY());
+
+        if (enemyX >= 1000 || enemyY >= 700) {
+            setX(getX() - this.getImage().getWidth() + heading.getX());
+            setY(getY() - this.getImage().getHeight() + heading.getY());
+        } else if (enemyX <= 0 || enemyY <= 0) {
+            setX(getX() + this.getImage().getWidth() + heading.getX());
+            setY(getY() + this.getImage().getHeight() + heading.getY());
+        } else {
+            setX(getX() + heading.getX());
+            setY(getY() + heading.getY());
+        }
+
     }
 
     @Override
