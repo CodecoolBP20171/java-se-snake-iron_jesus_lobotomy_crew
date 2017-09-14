@@ -14,7 +14,7 @@ import static com.codecool.snake.Game.*;
 
 public class SnakeHead extends GameEntity implements Animatable {
 
-    private static final float speed = 2;
+    private static float speed = 2;
     private static final float turnRate = 2;
     private GameEntity tail; // the last element. Needed to know where to add the next part.
     public static Label healthTotal = new Label();
@@ -87,5 +87,13 @@ public class SnakeHead extends GameEntity implements Animatable {
         healthTotal.setText("Health:" + String.valueOf(Globals.health));
 
 
+    }
+
+    public void changeSpeed(int multiplier) {
+        speed *= multiplier;
+    }
+
+    public static void setSpeedToDefault() {
+        speed = 2;
     }
 }

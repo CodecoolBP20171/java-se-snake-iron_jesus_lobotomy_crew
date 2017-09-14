@@ -25,7 +25,10 @@ public class Globals {
     public static Image powerupBerry = new Image("powerup_berry.png");
     public static Image fastEnemy = new Image("fast_enemy.png");
     public static Image strongEnemy = new Image("strong_enemy.png");
-    public static Image background = new Image("nyancat-bg.gif");
+    public static Image fastEnemy = new Image ("fast_enemy.png");
+    public static Image powerupBerry = new Image("powerup_berry.png");
+    public static Image ironJesus = new Image("ironjesuspowerup.png");
+    public static Image froggy = new Image("retardedfrog.png");
     //.. put here the other images you want to use
 
     public static boolean leftKeyDown;
@@ -33,6 +36,7 @@ public class Globals {
     public static List<GameEntity> gameObjects;
     public static List<GameEntity> newGameObjects; // Holds game objects crated in this frame.
     public static List<GameEntity> oldGameObjects; // Holds game objects that will be destroyed this frame.
+    public static Timer timer;
     public static GameLoop gameLoop;
 
     static {

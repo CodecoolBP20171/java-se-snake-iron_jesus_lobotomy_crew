@@ -2,7 +2,10 @@ package com.codecool.snake;
 
 import com.codecool.snake.entities.GameEntity;
 import com.codecool.snake.entities.Animatable;
+import com.codecool.snake.entities.powerups.RetardedFrogPowerUp;
+import com.codecool.snake.entities.snakes.SnakeHead;
 import javafx.animation.AnimationTimer;
+import jdk.nashorn.internal.objects.Global;
 
 public class GameLoop extends AnimationTimer {
 
@@ -20,5 +23,14 @@ public class GameLoop extends AnimationTimer {
 
         Globals.gameObjects.removeAll(Globals.oldGameObjects);
         Globals.oldGameObjects.clear();
+        Globals.timer.tickCount();
+
+        if (Globals.timer.getCounterStatus()) {
+            if (Globals.timer.isTimeOut(Globals.timer.getStart())) {
+                Globals.timer.setCounter(false);
+                SnakeHead.setSpeedToDefault();
+                RetardedFrogPowerUp.setApplied(false);
+            }
+        }
     }
 }

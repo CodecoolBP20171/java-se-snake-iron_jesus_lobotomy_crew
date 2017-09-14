@@ -8,6 +8,8 @@ import com.codecool.snake.entities.GameEntity;
 import com.codecool.snake.entities.enemies.FastEnemy;
 import com.codecool.snake.entities.enemies.SimpleEnemy;
 import com.codecool.snake.entities.enemies.StrongEnemy;
+import com.codecool.snake.entities.powerups.IronJesusPowerUp;
+import com.codecool.snake.entities.powerups.RetardedFrogPowerUp;
 import com.codecool.snake.entities.powerups.SimplePowerup;
 import com.codecool.snake.entities.snakes.SnakeHead;
 import javafx.event.ActionEvent;
@@ -51,10 +53,15 @@ public class Game extends Pane {
         new SimplePowerup();
         new SimplePowerup();
 
-        SnakeHead.healthTotal.setLayoutX(100);
-        SnakeHead.healthTotal.setText("Health:" + String.valueOf(Globals.health));
-        Enemy.scoreTotal.setLayoutX(200);
-        Enemy.scoreTotal.setText("Score: " + String.valueOf(Globals.score));
+        new IronJesusPowerUp();
+        new IronJesusPowerUp();
+        new IronJesusPowerUp();
+        new IronJesusPowerUp();
+
+        new RetardedFrogPowerUp();
+        new RetardedFrogPowerUp();
+        new RetardedFrogPowerUp();
+        new RetardedFrogPowerUp();
     }
 
 
@@ -73,6 +80,7 @@ public class Game extends Pane {
                 case RIGHT: Globals.rightKeyDown  = false; break;
             }
         });
+        Globals.timer = new Timer();
         Globals.gameLoop = new GameLoop();
         Globals.gameLoop.start();
     }
