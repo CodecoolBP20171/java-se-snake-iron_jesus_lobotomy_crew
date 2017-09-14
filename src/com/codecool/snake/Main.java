@@ -7,8 +7,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-import javax.swing.*;
-
 public class Main extends Application {
 
     public static void main(String[] args) {
@@ -20,6 +18,8 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) {
         Game game = new Game();
+
+        Sound sound = new Sound("nyan.mp3");
 
         primaryStage.setTitle("Snake Game");
         primaryStage.setScene(new Scene(game, Globals.WINDOW_WIDTH, Globals.WINDOW_HEIGHT));
@@ -35,6 +35,7 @@ public class Main extends Application {
         });
         game.getChildren().add(restart);
         primaryStage.show();
+        sound.play();
         game.start();
     }
 
