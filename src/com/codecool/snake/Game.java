@@ -29,22 +29,22 @@ public class Game extends Pane {
         new SnakeHead(this, 500, 500);
 
 
-        new SimpleEnemy();
-        new SimpleEnemy();
-        new SimpleEnemy();
-        new SimpleEnemy();
+        new SimpleEnemy(this);
+        new SimpleEnemy(this);
+        new SimpleEnemy(this);
+        new SimpleEnemy(this);
 
-        new StrongEnemy();
-        new StrongEnemy();
-        new StrongEnemy();
-        new StrongEnemy();
-        new StrongEnemy();
-        new StrongEnemy();
+        new StrongEnemy(this);
+        new StrongEnemy(this);
+        new StrongEnemy(this);
+        new StrongEnemy(this);
+        new StrongEnemy(this);
+        new StrongEnemy(this);
 
-        new FastEnemy();
-        new FastEnemy();
-        new FastEnemy();
-        new FastEnemy();
+        new FastEnemy(this);
+        new FastEnemy(this);
+        new FastEnemy(this);
+        new FastEnemy(this);
 
         new SimplePowerup();
         new SimplePowerup();
@@ -75,35 +75,6 @@ public class Game extends Pane {
         });
         Globals.gameLoop = new GameLoop();
         Globals.gameLoop.start();
-    }
-
-
-
-
-    public  void newGame(){
-
-        new SnakeHead(this, 500, 500);
-
-        new SimpleEnemy(this);
-        new SimpleEnemy(this);
-        new SimpleEnemy(this);
-        new SimpleEnemy(this);
-
-        new StrongEnemy(this);
-        new StrongEnemy(this);
-        new StrongEnemy(this);
-        new StrongEnemy(this);
-
-
-        new FastEnemy(this);
-        new FastEnemy(this);
-        new FastEnemy(this);
-        new FastEnemy(this);
-
-        new SimplePowerup(this);
-        new SimplePowerup(this);
-        new SimplePowerup(this);
-        new SimplePowerup(this);
     }
 
 

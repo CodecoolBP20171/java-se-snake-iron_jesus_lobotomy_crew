@@ -1,9 +1,10 @@
-    public static Label scoreTotal = new Label();
+
 package com.codecool.snake.entities;
 
 import com.codecool.snake.Globals;
 import com.codecool.snake.Utils;
 import javafx.geometry.Point2D;
+import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
 
 import java.util.Random;
@@ -16,6 +17,7 @@ abstract public class Enemy extends GameEntity{
     protected double direction;
     protected double enemyX = rnd.nextDouble() * Globals.WINDOW_WIDTH;
     protected double enemyY = rnd.nextDouble()* Globals.WINDOW_HEIGHT;
+    public static Label scoreTotal = new Label();
 
 
     protected Enemy(Pane pane) {

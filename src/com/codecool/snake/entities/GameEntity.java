@@ -11,7 +11,6 @@ import java.util.Random;
 // The base class for every game entity.
 public abstract class GameEntity extends ImageView {
 
-    protected static Pane pane;
     protected static double direction;
 
     protected static Pane pane;

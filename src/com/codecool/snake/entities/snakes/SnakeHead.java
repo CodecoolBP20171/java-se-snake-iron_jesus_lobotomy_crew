@@ -1,6 +1,5 @@
 package com.codecool.snake.entities.snakes;
 
-import com.codecool.snake.Game;
 import com.codecool.snake.entities.GameEntity;
 import com.codecool.snake.Globals;
 import com.codecool.snake.entities.Animatable;
@@ -9,9 +8,9 @@ import com.codecool.snake.entities.Interactable;
 import javafx.geometry.Point2D;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
-import javafx.util.converter.NumberStringConverter;
 
-import javax.script.Bindings;
+
+import static com.codecool.snake.Game.*;
 
 public class SnakeHead extends GameEntity implements Animatable {
 
@@ -67,13 +66,14 @@ public class SnakeHead extends GameEntity implements Animatable {
             System.out.println(Globals.health);
             System.out.println("Game Over");
             Globals.gameLoop.stop();
-            Game.showPopup();
+            showPopup();
         }
     }
 
     public void addPart(int numParts) {
         for (int i = 0; i < numParts; i++) {
-            SnakeBody newPart = new SnakeBody(pane, tail);
+            SnakeBody newPart;
+            newPart = new SnakeBody(pane, tail);
             tail = newPart;
         }
     }

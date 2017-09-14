@@ -1,4 +1,3 @@
-import javafx.scene.control.Label;
 package com.codecool.snake.entities.enemies;
 
 import com.codecool.snake.Globals;
@@ -70,51 +69,7 @@ public class FastEnemy extends Enemy implements Animatable, Interactable {
 
     @Override
     public void setScore(){
-        Globals.score =- 2;
-    }
-}
-/*public class FastEnemy extends Enemy implements Animatable, Interactable {
-
-    private static final int damage = 5;
-    private static int speed = 4;
-
-    public FastEnemy() {
-        super();
-        setImage(Globals.fastEnemy);
-    }
-
-
-    @Override
-    public void step() {
-        if (isOutOfBounds()) {
-            direction = rnd.nextDouble() * 360;
-            heading = Utils.directionToVector(direction, speed);
-        }
-        setX(getX() + heading.getX());
-        setY(getY() + heading.getY());
-
-    }
-
-    @Override
-    public void apply(SnakeHead player) {
-        player.changeHealth(-damage);
-        destroy();
-    }
-
-    @Override
-    public String getMessage() {
-        return damage + " damage";
-    }
-
-    @Override
-    public void setScore(){
-        Globals.score =- 2;
-    }
-}
-*/
-
-    @Override
-    public void setScore(){
         Globals.score =Globals.score - 2;
         scoreTotal.setText("Score: " + String.valueOf(Globals.score));
     }
+}

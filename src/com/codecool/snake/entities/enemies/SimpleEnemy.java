@@ -7,6 +7,7 @@ import com.codecool.snake.entities.Animatable;
 import com.codecool.snake.Utils;
 import com.codecool.snake.entities.Interactable;
 import com.codecool.snake.entities.snakes.SnakeHead;
+import javafx.scene.layout.Pane;
 
 
 // a simple enemy TODO make better ones.
