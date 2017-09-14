@@ -1,5 +1,6 @@
 package com.codecool.snake.entities.snakes;
 
+import com.codecool.snake.Sound;
 import com.codecool.snake.entities.GameEntity;
 import com.codecool.snake.Globals;
 import com.codecool.snake.entities.Animatable;
@@ -66,6 +67,7 @@ public class SnakeHead extends GameEntity implements Animatable {
             System.out.println(Globals.health);
             System.out.println("Game Over");
             Globals.gameLoop.stop();
+            Sound.nyan.stop();
             showPopup();
         }
     }

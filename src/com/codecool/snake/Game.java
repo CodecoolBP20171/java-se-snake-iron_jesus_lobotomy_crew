@@ -94,9 +94,11 @@ public class Game extends Pane {
         // setting button function
         exit.setText("Exit");
         winPopup.setAlignment(Pos.CENTER);
+
         exit.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+
                 System.exit(1);
             }
         });

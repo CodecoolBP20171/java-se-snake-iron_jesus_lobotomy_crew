@@ -1,36 +1,21 @@
 package com.codecool.snake;
+import java.awt.*;
+import java.applet.*;
+public class Sound extends Applet {
+    public static AudioClip nyan;
 
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
-
-import java.io.File;
-
-public class Sound {
-
-    String file;
-    Media sound;
-    MediaPlayer player;
-
-    public Sound(String file) {
-        this.file = file;
-        this.sound = new Media(new File(file).toURI().toString());
-        this.player = new MediaPlayer(sound);
+    public void init() {
+        nyan = getAudioClip(getCodeBase(), "nyan.mp3");
     }
 
-    public void play(){
-        player.play();
+    public void start() {
+        if (nyan != null) {
+            nyan.loop();
+        }
     }
 
-    public void stop(){
-        player.stop();
-    }
-
-    public void setVolume(double value){
-        player.setVolume(value);
-    }
-
-    public double getVolume(){
-        return player.getVolume();
+    public void stop() {
+        if (nyan != null)
+            nyan.stop();
     }
 }
-
