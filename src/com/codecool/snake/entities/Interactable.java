@@ -11,4 +11,6 @@ public interface Interactable {
 
     void setScore();
 
+    void addNewEntity();
+
 }

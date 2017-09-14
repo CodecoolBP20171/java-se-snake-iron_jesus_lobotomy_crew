@@ -16,4 +16,5 @@ abstract public class Powerup extends GameEntity {
         setX(rnd.nextDouble() * Globals.WINDOW_WIDTH);
         setY(rnd.nextDouble() * Globals.WINDOW_HEIGHT);
     }
+
 }

@@ -1,5 +1,6 @@
 package com.codecool.snake.entities.snakes;
 
+import com.codecool.snake.Sound;
 import com.codecool.snake.entities.GameEntity;
 import com.codecool.snake.Globals;
 import com.codecool.snake.entities.Animatable;
@@ -56,6 +57,7 @@ public class SnakeHead extends GameEntity implements Animatable {
                     Interactable interactable = (Interactable) entity;
                     interactable.apply(this);
                     interactable.setScore();
+                    interactable.addNewEntity();
                     System.out.println(interactable.getMessage());
                 }
             }
@@ -65,7 +67,9 @@ public class SnakeHead extends GameEntity implements Animatable {
         if (isOutOfBounds() || Globals.health <= 0) {
             System.out.println(Globals.health);
             System.out.println("Game Over");
+            Sound.stop();
             Globals.gameLoop.stop();
+
             showPopup();
         }
     }

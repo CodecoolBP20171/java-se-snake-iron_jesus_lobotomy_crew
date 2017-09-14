@@ -9,9 +9,12 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.layout.*;
+import javafx.scene.media.AudioClip;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
+
+import java.io.File;
 
 
 public class Main extends Application {
@@ -27,7 +30,10 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         Game game = new Game();
 
-        Sound sound = new Sound("nyan.mp3");
+
+        AudioClip  sound1 = new AudioClip(new File("nyan.mp3").toURI().toString());
+        sound1.play();
+
 
         primaryStage.setTitle("Snake Game");
         primaryStage.setScene(new Scene(game, Globals.WINDOW_WIDTH, Globals.WINDOW_HEIGHT));
@@ -55,6 +61,8 @@ public class Main extends Application {
         restart.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+                sound1.stop();
+
                 restart(primaryStage);
 
             }
@@ -62,11 +70,12 @@ public class Main extends Application {
         game.getChildren().add(restart);
 
         primaryStage.show();
-        sound.play();
+
         game.start();
     }
 
     public void cleanup(){
+
         Globals.restartGlobalScore();
         Globals.newGameObjects.clear();
         Globals.oldGameObjects.clear();

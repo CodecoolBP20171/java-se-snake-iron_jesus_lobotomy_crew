@@ -11,47 +11,19 @@ import javafx.scene.layout.Pane;
 public class FastEnemy extends Enemy implements Animatable, Interactable {
 
     private static final int damage = 5;
-    private static int speed = 4;
+    private  int speed = 4;
 
 
 
     public FastEnemy(Pane pane) {
         super(pane);
+
         setImage(Globals.fastEnemy);
     }
 
     @Override
     public void step() {
-        heading = Utils.directionToVector(direction, speed);
-        if (isOutOfBounds()) {
-            direction = rnd.nextDouble() * 360;
-            heading = Utils.directionToVector(direction, speed);
-        }
-        if (getX() >= 960) {
-            direction = rnd.nextDouble() * 360;
-            heading = Utils.directionToVector(direction, speed);
-            setX(10 + this.getImage().getWidth() + heading.getX());
-        }
-        if (getX() <= 10) {
-            direction = rnd.nextDouble() * 360;
-            heading = Utils.directionToVector(direction, speed);
-            setX(960 - this.getImage().getWidth() + heading.getX());
-        }
-        if (getY() >= 620) {
-            direction = rnd.nextDouble() * 360;
-            heading = Utils.directionToVector(direction, speed);
-            setY(10 + this.getImage().getHeight() + heading.getY());
-        }
-        if (getY() <= 10) {
-            direction = rnd.nextDouble() * 360;
-            heading = Utils.directionToVector(direction, speed);
-            setY(620 - this.getImage().getHeight() + heading.getY());
-
-        } else {
-
-            setX(getX() + heading.getX());
-            setY(getY() + heading.getY());
-        }
+        enemyStep(this.speed);
     }
 
 
@@ -71,5 +43,10 @@ public class FastEnemy extends Enemy implements Animatable, Interactable {
     public void setScore(){
         Globals.score =Globals.score - 2;
         scoreTotal.setText("Score: " + String.valueOf(Globals.score));
+    }
+
+    @Override
+    public void addNewEntity() {
+        Globals.newGameObjects.add(this);
     }
 }

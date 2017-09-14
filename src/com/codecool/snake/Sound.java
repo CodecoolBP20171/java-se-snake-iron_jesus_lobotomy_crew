@@ -7,9 +7,9 @@ import java.io.File;
 
 public class Sound {
 
-    String file;
-    Media sound;
-    MediaPlayer player;
+    static String file;
+    static Media sound;
+    public static MediaPlayer player;
 
     public Sound(String file) {
         this.file = file;
@@ -17,12 +17,13 @@ public class Sound {
         this.player = new MediaPlayer(sound);
     }
 
-    public void play(){
+    public  static void play(){
         player.play();
     }
 
-    public void stop(){
+    public  static void stop(){
         player.stop();
+
     }
 
     public void setVolume(double value){

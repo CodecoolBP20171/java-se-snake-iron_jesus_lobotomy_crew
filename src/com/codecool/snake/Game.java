@@ -28,7 +28,7 @@ public class Game extends Pane {
         new SnakeHead(this, 500, 500);
 
 
-        new SimpleEnemy(this);
+        /*new SimpleEnemy(this);
         new SimpleEnemy(this);
         new SimpleEnemy(this);
         new SimpleEnemy(this);
@@ -38,14 +38,14 @@ public class Game extends Pane {
         new StrongEnemy(this);
         new StrongEnemy(this);
         new StrongEnemy(this);
-        new StrongEnemy(this);
+        new StrongEnemy(this);*/
 
-        new FastEnemy(this);
-        new FastEnemy(this);
-        new FastEnemy(this);
+        //new FastEnemy(this);
+        //new FastEnemy(this);
+        //new FastEnemy(this);
         new FastEnemy(this);
 
-        new SimplePowerup();
+        /*new SimplePowerup();
         new SimplePowerup();
         new SimplePowerup();
         new SimplePowerup();
@@ -58,11 +58,12 @@ public class Game extends Pane {
         new RetardedFrogPowerUp();
         new RetardedFrogPowerUp();
         new RetardedFrogPowerUp();
-        new RetardedFrogPowerUp();
+        new RetardedFrogPowerUp();*/
     }
 
 
     public void start() {
+        System.out.println("START!!!!!!!!!!!!!!!!!!!!!!");
         Scene scene = getScene();
         scene.setOnKeyPressed(event -> {
             switch (event.getCode()) {

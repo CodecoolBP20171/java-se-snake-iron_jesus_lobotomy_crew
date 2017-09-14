@@ -23,37 +23,7 @@ public class SimpleEnemy extends Enemy implements Animatable, Interactable {
 
     @Override
     public void step() {
-        heading = Utils.directionToVector(direction, speed);
-        if (isOutOfBounds()) {
-            direction = rnd.nextDouble() * 360;
-            heading = Utils.directionToVector(direction, speed);
-        }
-        if (getX() >= 960) {
-            direction = rnd.nextDouble() * 360;
-            heading = Utils.directionToVector(direction, speed);
-            setX(10 + this.getImage().getWidth()+heading.getX() );
-        }
-        if (getX() <= 10) {
-            direction = rnd.nextDouble() * 360;
-            heading = Utils.directionToVector(direction, speed);
-            setX(960 - this.getImage().getWidth()+ heading.getX());
-        }
-        if (getY() >= 620) {
-            direction = rnd.nextDouble() * 360;
-            heading = Utils.directionToVector(direction, speed);
-            setY(10 + this.getImage().getHeight()+ heading.getY());
-        }
-        if (getY() <= 10) {
-            direction = rnd.nextDouble() * 360;
-            heading = Utils.directionToVector(direction, speed);
-            setY(620 - this.getImage().getHeight() + heading.getY());
-
-        }else{
-
-            setX(getX() + heading.getX());
-            setY(getY() + heading.getY());
-        }
-
+        enemyStep(this.speed);
     }
 
 
@@ -71,7 +41,7 @@ public class SimpleEnemy extends Enemy implements Animatable, Interactable {
 
     @Override
     public void setScore(){
-        Globals.score =Globals.score- 2;
+        Globals.score =Globals.score- 1;
         scoreTotal.setText("Score: " + String.valueOf(Globals.score));
     }
 
