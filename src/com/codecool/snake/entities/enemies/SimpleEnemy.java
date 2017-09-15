@@ -1,6 +1,7 @@
 package com.codecool.snake.entities.enemies;
 
 import com.codecool.snake.entities.Enemy;
+import com.codecool.snake.entities.GameEntity;
 import com.codecool.snake.Globals;
 import com.codecool.snake.entities.Animatable;
 import com.codecool.snake.Utils;
@@ -60,6 +61,7 @@ public class SimpleEnemy extends Enemy implements Animatable, Interactable {
     @Override
     public void apply(SnakeHead player) {
         player.changeHealth(-damage);
+        player.addPart(-4);
         destroy();
     }
 

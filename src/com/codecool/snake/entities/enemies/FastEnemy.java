@@ -58,6 +58,7 @@ public class FastEnemy extends Enemy implements Animatable, Interactable {
         @Override
     public void apply(SnakeHead player) {
         player.changeHealth(-damage);
+        player.addPart(-4);
         destroy();
 
     }
