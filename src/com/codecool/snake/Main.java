@@ -57,6 +57,7 @@ public class Main extends Application {
         restart.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+                sound.stop();
                 restart(primaryStage);
 
             }
